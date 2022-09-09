@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width , initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Quiz</title>
+        <link rel="stylesheet" href="../index.css">
+
+    </head>
+    <body>
+        <div class="parentContainer">
+        <nav>
+            <span class="header"> Fun with Triangles</span>
+            <span class="links"><a href="./area.html">Area</a></span>
+            <span class="links"><a href="./hypotenuse.html">Hypotenuse</a></span>
+            <span class="links"><a href="./quiz.html">Quiz</a></span>
+            <span class="links"><a href="../index.html">Triangle Check</a></span>
+        </nav>
+        <div class="quizbody">
+            <h2>Quiz Time</h2>
+            <div class="questions"> What is a triangle ith 3 equal sides called?</div>
+            <div class="options">
+                <span><input type="radio" name="q1">Isocles triangle</span>
+                <span><input type="radio" name="q1" onclick="scoreupdate()">Equilateral triangle</span>
+                <span><input type="radio" name="q1">Right angled triangle</span>
+            </div>
+            <div>
+                <div class="questions">A triangle can have</div>
+                <div class="options">
+                    <span><input type="radio" name="q2" onclick="scoreupdate()">One</span>
+                    <span><input type="radio" name="q2" >Two</span>
+                </div>
+            </div>
+            <div>
+                <div class="questions">A scalene triangle has ___ lines of symmetry</div>
+                <div class="options">
+                    <span><input type="radio" name="q3" onclick="scoreupdate()">Two</span>
+                    <span><input type="radio" name="q3" >No</span>
+                    <span><input type="radio" name="q3" >15</span>
+
+                </div>
+            </div>
+            <div>
+                <div class="questions">What is the area of triangle if base is 4cms and height is 5cms</div>
+                <div class="options">
+                    <span><input type="radio" name="q4" >20</span>
+                    <span><input type="radio" name="q4" onclick="scoreupdate()">20 cm2</span>
+                    <span><input type="radio" name="q4" >20 m2</span>
+                </div>
+            </div>
+            <div>
+                <div class="questions">Select the samllest angle in a right isocles triangle.</div>
+                <div class="options">
+                <span><input type="radio" name="lastone">90 deg</span>
+                <span><input type="radio" name="lastone" onclick="scoreupdate()">45 deg</span>
+                <span><input type="radio" name="lastone">60 deg</span>
+            </div>
+            </div>
+            <div><button type="submit" onclick="result()">Submit answers</button></div>
+            <div ><span id="output"></span></div>
+            </div>
+        </div>
+
+        <script>
+            var count = 0;
+            var output = document.getElementById("output");
+            function scoreupdate(){
+                count++;
+            }
+            function result(){
+                output.innerText = `Your score is ${count}`;
+            }
+        </script>
+    </body>
+</html>

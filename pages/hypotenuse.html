@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width , initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Hypotenuse finder</title>
+        <link rel="stylesheet" href="../index.css">
+
+    </head>
+    <body>
+        <div class="parentContainer">
+        <nav>
+            <span class="header"> Fun with Triangles</span>
+            <span class="links"><a href="./area.html">Area</a></span>
+            <span class="links"><a href="./hypotenuse.html">Hypotenuse</a></span>
+            <span class="links"><a href="./quiz.html">Quiz</a></span>
+            <span class="links"><a href="../index.html">Triangle Check</a></span>
+        </nav>
+        <div class="body">
+        <h2>Hypotenuse</h2>
+        <div>Base</div>
+        <input type="number" id="base" placeholder="Enter the base">
+        <div>Height</div>
+        <input type="number" id="height" placeholder="Enter the height">
+        
+        <div><button type="submit" onclick="hypotenusefinder()">Check</button></div>
+
+        <div ><span id="output"></span></div>
+        </div>
+        </div>
+
+    <script>
+        var base = document.getElementById("base");
+        var height = document.getElementById("height");
+        var output = document.getElementById("output");
+
+        function hypotenusefinder(){
+            if(parseInt(base.value)<=0 || parseInt(height.value)<=0 ){
+                output.innerText = "Invalid inputs";
+            }
+            else{
+                var hyp = Math.sqrt((parseInt(base.value) * parseInt(base.value))+(parseInt(height.value) * parseInt(height.value)));
+                output.innerText = `The triangle's hypotenuse is ${hyp.toFixed(2)}`;
+            }
+        }
+
+    </script>
+    </body>
+</html>

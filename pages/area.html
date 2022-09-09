@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width , initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Area finder</title>
+        <link rel="stylesheet" href="../index.css">
+
+    </head>
+    <body>
+        <div class="parentContainer">
+            
+        <nav>
+            <span class="header"> Fun with Triangles</span>
+            <span class="links"><a href="./area.html">Area</a></span>
+            <span class="links"><a href="./hypotenuse.html">Hypotenuse</a></span>
+            <span class="links"><a href="./quiz.html">Quiz</a></span>
+            <span class="links"><a href="../index.html">Triangle Check</a></span>
+        </nav>
+        <div class="body">
+            <h2>Area</h2>
+            <div>Side1</div>
+            <input type="number" id="side1" placeholder="Enter the length">
+            <div>Side2</div>
+            <input type="number" id="side2" placeholder="Enter the length">
+            <div>Side3</div>
+            <input type="number" id="side3" placeholder="Enter the length">
+            <div><button type="submit" onclick="areagetter()">Check</button></div>
+            <div ><span id="output"></span></div>
+        </div>
+    </div>
+
+    <script>
+        var side1 = document.getElementById("side1");
+        var side2 = document.getElementById("side2");
+        var side3 = document.getElementById("side3");
+        var output = document.getElementById("output");
+
+        function areagetter(){
+            var s1 = parseInt(side1.value);
+            var s2 = parseInt(side2.value);
+            var s3 = parseInt(side3.value);
+
+            if(s1<=0 ||s2<=0 ||s3<=0){
+                console.log(s1,s2,s3);
+                output.innerText = "Invalid side lengths";
+            }
+            else{
+                var s = (s1+s2+s3)/2;
+                var area = Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
+                output.innerText = "Area of triangle is: " + area.toFixed(2);
+            }
+        }
+
+    </script>
+    </body>
+</html>

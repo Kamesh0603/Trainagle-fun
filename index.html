@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width , initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Triangle Check</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <div class="parentContainer">
+        <nav>
+            <span class="header"> Fun with Triangles</span>
+            <span class="links"><a href="./pages/area.html">Area</a></span>
+            <span class="links"><a href="./pages/hypotenuse.html">Hypotenuse</a></span>
+            <span class="links"><a href="./pages/quiz.html">Quiz</a></span>
+            <span class="links"><a href="./index.html">Triangle Check</a></span>
+           
+        </nav>
+        <div class="body">
+            <h2>Can you make a triangle?</h2>
+            <div>Angle1</div>
+            <input type="number" id="angle1" placeholder="Angle1">
+            <div>Angle2</div>
+            <input type="number" id="angle2" placeholder="Angle2">
+            <div>Angle3</div>
+            <input type="number" id="angle3" placeholder="Angle3">
+            <div><button type="submit" onclick="trianglechecker()">Check</button></div>
+            <div ><span id="output"></span></div>
+        </div>
+    </div>
+
+    <script>
+        var angle1 = document.getElementById("angle1");
+        var angle2 = document.getElementById("angle2");
+        var angle3 = document.getElementById("angle3");
+        var output = document.getElementById("output");
+
+        function trianglechecker(){
+
+            if( parseInt(angle1.value)+parseInt(angle2.value)+parseInt(angle3.value)==180){
+                output.innerText = "Triangle";
+            }
+            if((parseInt(angle1.value)<=0 ||parseInt(angle2.value)<=0 || parseInt(angle3.value)<=0)){
+                output.innerText = "Invalid angles";
+            }
+            else{
+                output.innerText = "Not a triangle";
+            }
+        }
+
+    </script>
+    </body>
+</html>
