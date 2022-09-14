@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>Triangle Check</title>
         <link rel="stylesheet" href="./index.css">
+        <link rel="icon" href="./favicon.png" style="height:16px; width:16px;" >
     </head>
     <body>
         <div class="parentContainer">
@@ -37,14 +38,22 @@
 
         function trianglechecker(){
 
-            if( parseInt(angle1.value)+parseInt(angle2.value)+parseInt(angle3.value)==180){
-                output.innerText = "Triangle";
-            }
-            if((parseInt(angle1.value)<=0 ||parseInt(angle2.value)<=0 || parseInt(angle3.value)<=0)){
+            if((parseInt(angle1.value)<=0 || parseInt(angle2.value)<=0 ||parseInt(angle3.value)<=0)){
                 output.innerText = "Invalid angles";
+                return;
             }
+           
             else{
+                if(//condition
+                    (parseInt(angle1.value)+parseInt(angle2.value)+parseInt(angle3.value))!=180
+                    ){
                 output.innerText = "Not a triangle";
+                return;
+                }
+                else{
+                output.innerText = "These angles form a triangle";
+                return;
+            }
             }
         }
 

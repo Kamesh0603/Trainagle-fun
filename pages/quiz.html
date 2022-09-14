@@ -5,10 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <title>Quiz</title>
         <link rel="stylesheet" href="../index.css">
+        <link rel="icon" href="./favicon.png" style="height:16px; width:16px;" >
+
 
     </head>
     <body>
-        <div class="parentContainer">
+        <div class="quizparentContainer">
         <nav>
             <span class="header"> Fun with Triangles</span>
             <span class="links"><a href="./area.html">Area</a></span>
@@ -18,47 +20,100 @@
         </nav>
         <div class="quizbody">
             <h2>Quiz Time</h2>
-            <div class="questions"> What is a triangle ith 3 equal sides called?</div>
+
+        
+            <div class="questions"> What is a triangle with 3 equal sides called?</div>
             <div class="options">
                 <span><input type="radio" name="q1">Isocles triangle</span>
                 <span><input type="radio" name="q1" onclick="scoreupdate()">Equilateral triangle</span>
                 <span><input type="radio" name="q1">Right angled triangle</span>
             </div>
-            <div>
-                <div class="questions">A triangle can have</div>
+        
+
+            
+                <div class="questions">A triangle can have ___ right angles.</div>
                 <div class="options">
                     <span><input type="radio" name="q2" onclick="scoreupdate()">One</span>
-                    <span><input type="radio" name="q2" >Two</span>
+                    <span><input type="radio" name="q2">Two</span>
                 </div>
-            </div>
-            <div>
+            
+
+
+            
                 <div class="questions">A scalene triangle has ___ lines of symmetry</div>
                 <div class="options">
-                    <span><input type="radio" name="q3" onclick="scoreupdate()">Two</span>
-                    <span><input type="radio" name="q3" >No</span>
-                    <span><input type="radio" name="q3" >15</span>
+                    <span><input type="radio" name="q3" >Two</span>
+                    <span><input type="radio" name="q3" onclick="scoreupdate()">No</span>
+                    <span><input type="radio" name="q3" >One</span>
 
                 </div>
-            </div>
-            <div>
+           
+
+            
                 <div class="questions">What is the area of triangle if base is 4cms and height is 5cms</div>
                 <div class="options">
                     <span><input type="radio" name="q4" >20</span>
                     <span><input type="radio" name="q4" onclick="scoreupdate()">20 cm2</span>
                     <span><input type="radio" name="q4" >20 m2</span>
                 </div>
-            </div>
-            <div>
-                <div class="questions">Select the samllest angle in a right isocles triangle.</div>
+            
+
+            
+                <div class="questions">Select the smallest angle in a right isocles triangle.</div>
                 <div class="options">
-                <span><input type="radio" name="lastone">90 deg</span>
-                <span><input type="radio" name="lastone" onclick="scoreupdate()">45 deg</span>
-                <span><input type="radio" name="lastone">60 deg</span>
+                <span><input type="radio" name="q5">90 deg</span>
+                <span><input type="radio" name="q5" onclick="scoreupdate()">45 deg</span>
+                <span><input type="radio" name="q5">60 deg</span>
             </div>
+            
+
+            
+                <div class="questions">The perimeter of scalene triangle with sides a, b, c is</div>
+                <div class="options">
+                <span><input type="radio" name="q6" onclick="scoreupdate()">a+b+c</span>
+                <span><input type="radio" name="q6" >2a</span>
+                <span><input type="radio" name="q6">a*b*c</span>
             </div>
+            
+
+            
+                <div class="questions">Two triangles are said to be congruent, if they have the same ___</div>
+                <div class="options">
+                    <span><input type="radio" name="q7" >Area</span>
+                    <span><input type="radio" name="q7" >Shape and Size</span>
+                    <span><input type="radio" name="q7" onclick="scoreupdate()">Both</span>
+
+                </div>
+            
+
+            
+                <div class="questions">If you know one side of a 45-45-90 triangle, then you can ALWAYS find the exact length of the other 2 sides.</div>
+                <div class="options">
+                    <span><input type="radio" name="q8" onclick="scoreupdate()">Yes</span>
+                    <span><input type="radio" name="q8" >No</span>
+                </div>
+            
+
+            
+                <div class="questions">The ___ altitudes of an isocles triangle are equal</div>
+                <div class="options">
+                    <span><input type="radio" name="q9" >One</span>
+                    <span><input type="radio" name="q9" onclick="scoreupdate()">Two</span>
+                    <span><input type="radio" name="q9" >Three</span>
+
+                </div>
+
+                <div class="questions">Ifa triangle,square and pentagon are drawn insidethe same circle of radius r, which figure will have the least area?</div>
+                <div class="options">
+                    <span><input type="radio" name="q10" onclick="scoreupdate()">Triangle</span>
+                    <span><input type="radio" name="q10" >Square</span>
+                    <span><input type="radio" name="q10" >Pentagon</span>
+                </div>
+           
+
             <div><button type="submit" onclick="result()">Submit answers</button></div>
-            <div ><span id="output"></span></div>
-            </div>
+            <div><span id="output"></span></div>
+            
         </div>
 
         <script>
