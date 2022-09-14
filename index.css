@@ -76,7 +76,6 @@ button{
     background-image: linear-gradient(to right,slateblue,turquoise,slateblue);
     width: 30vw;
     font-weight: 500;
-    
     border-radius: 5px;
     animation-name: example;
     animation-duration: 4s;
@@ -121,7 +120,7 @@ button{
     background-image: linear-gradient(45deg ,turquoise,rgb(214, 193, 0),turquoise);
     text-align: center;
     width: auto;
-    height: 140vh;
+    height: max-content;
     margin: auto;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -139,7 +138,7 @@ button{
 }
 .quizbody button{
     width: 10%;
-    height:5%;
+    height:7vh;
     margin: 30px 0px 30px 0px;
     border-radius: 8px;
     font-size: 15px;
@@ -161,4 +160,5 @@ button{
     background-color: teal;
     text-align: left;
     padding-left: 25%;
+    font-weight: 500;
 }
