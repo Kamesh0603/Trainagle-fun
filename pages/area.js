@@ -8,7 +8,11 @@ var side1 = document.getElementById("side1");
             var s2 = parseInt(side2.value);
             var s3 = parseInt(side3.value);
 
-            if(s1<=0 ||s2<=0 ||s3<=0){
+            if(side1.value=="" || side2.value=="" ||side3.value==""){
+                output.innerText = "Please enter all the sides";
+                return;
+            }
+            else if(s1<=0 ||s2<=0 ||s3<=0){
                 console.log(s1,s2,s3);
                 output.innerText = "Invalid side lengths";
             }

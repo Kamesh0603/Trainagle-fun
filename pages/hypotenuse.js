@@ -3,6 +3,10 @@ var height = document.getElementById("height");
 var output = document.getElementById("output");
 
 function hypotenusefinder(){
+    if(base.value =="" || height.value==""){
+        output.innerText = "Please enter base and height";
+        return;
+    }
     if(parseInt(base.value)<=0 || parseInt(height.value)<=0 ){
         output.innerText = "Invalid inputs";
     }
